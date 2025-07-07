@@ -1,0 +1,28 @@
+name: Upload Frontend and Backend
+
+on:
+  push:
+    branches:
+      - main  # or replace with your branch name
+
+jobs:
+  upload-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Show contents of frontend and backend
+        run: |
+          echo "Listing frontend and backend directories"
+          ls -la frontend
+          ls -la backend
+
+      - name: Upload frontend and backend as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-backend-build
+          path: |
+            frontend/
+            backend/

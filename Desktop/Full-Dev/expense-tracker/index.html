@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXPENSE TRACKER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <h1>EXPENSE TRACKER</h1>
+      <div id="emptyList">
+        <span style="text-decoration: underline"
+          >Click here <i class="fas fa-trash"></i
+        ></span>
+        to empty the list.
+      </div>
+      <form action="" method="get">
+        <label for="expense-id">Expense Name</label>
+        <input
+          type="text"
+          name="expense-name"
+          id="expense-id"
+          placeholder="Car Insurance Purchase, etc."
+        />
+
+        <label for="expense-amt">Expense Amount</label>
+        <input
+          type="number"
+          name="expense-amt"
+          id="expense-amt"
+          min="0"
+          placeholder="(In rupees) for e.g. Rs. 69.99"
+        />
+
+        <input type="button" value="Add Expense" id="expense-add-button" />
+      </form>
+      <h2>EXPENSES</h2>
+      <div id="expense-list">
+        <!-- <div class="expense-item">
+          <p>Movie Ticket (<span>Rs. 299.89</span>)</p>
+          <button data-id="123">Delete</button>
+        </div> -->
+      </div>
+      <div class="total-amt">Total: Rs. <span id="amount">0.00</span></div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

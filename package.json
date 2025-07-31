@@ -8,14 +8,14 @@
     "server": "nodemon api/server.js",
     "client": "cd client && npm run dev",
     "build": "cd client && npm run build",
+    "vercel-build": "cd client && npm install && npm run build",
     "start": "node api/server.js",
     "preview": "cd client && npm run preview",
     "install-client": "cd client && npm install",
     "install-server": "npm install",
     "install-all": "npm run install-server && npm run install-client",
     "test-api": "curl http://localhost:5000/api/health",
-    "clean": "rimraf client/dist client/build node_modules/*/node_modules",
-    "vercel-build": "npm run install-client && npm run build"
+    "clean": "rimraf client/dist client/build node_modules/*/node_modules"
   },
   "dependencies": {
     "axios": "^1.11.0",
